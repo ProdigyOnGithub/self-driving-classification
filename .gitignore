@@ -1,0 +1,18 @@
+# environment + downloaded models (recreate with pip / hf download)
+/venv
+/hf_cache
+__pycache__/
+
+# datasets (BDD-OIA: regenerate with get_bddoia.py; campus photos: shared privately)
+/data_bddoia
+
+/cache
+
+# model checkpoints - too big for git, share via Drive / GitHub Releases
+*.pt
+
+# junk
+/bad_runs
+.DS_Store
+*.HEIC
+*.heic

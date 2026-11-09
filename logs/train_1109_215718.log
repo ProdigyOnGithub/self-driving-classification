@@ -1,0 +1,93 @@
+device=cuda bf16=True -> runs/D_full384
+BDD train 4800 | val 600 | test 600 | BITS 245
+Loading weights:   0%|          | 0/208 [00:00<?, ?it/s]Loading weights: 100%|██████████| 208/208 [00:00<00:00, 6874.55it/s]
+[transformers] [1mSiglipVisionModel LOAD REPORT[0m from: google/siglip-base-patch16-384
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.head.bias                                         | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.head.weight                                       | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+logit_bias                                                   | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+visual tokens per image: 144 x 768  (views per train image: 3)
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 3767.94it/s]
+mode=full  trainable params: 359.39M
+epoch 1 step 0 loss 0.8608 lr 1.00e-05
+epoch 1 step 50 loss 0.6897 lr 2.59e-04
+epoch 1 step 100 loss 0.6475 lr 2.95e-04
+== epoch 1  loss 0.7132  (52s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.578 auroc=0.780 STOP-recall=0.957 false-STOP=0.758
+   saved best (val auroc 0.7800)
+epoch 2 step 0 loss 0.6216 lr 2.88e-04
+epoch 2 step 50 loss 0.6853 lr 2.80e-04
+epoch 2 step 100 loss 0.4794 lr 2.69e-04
+== epoch 2  loss 0.6167  (52s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.637 auroc=0.769 STOP-recall=0.844 false-STOP=0.547
+epoch 3 step 0 loss 0.5370 lr 2.56e-04
+epoch 3 step 50 loss 0.5724 lr 2.41e-04
+epoch 3 step 100 loss 0.7737 lr 2.25e-04
+== epoch 3  loss 0.5978  (52s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.707 auroc=0.803 STOP-recall=0.794 false-STOP=0.371
+   saved best (val auroc 0.8026)
+epoch 4 step 0 loss 0.5197 lr 2.07e-04
+epoch 4 step 50 loss 0.6121 lr 1.88e-04
+epoch 4 step 100 loss 1.0418 lr 1.69e-04
+== epoch 4  loss 0.5562  (52s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.757 auroc=0.832 STOP-recall=0.766 false-STOP=0.252
+   saved best (val auroc 0.8319)
+epoch 5 step 0 loss 0.5375 lr 1.50e-04
+epoch 5 step 50 loss 0.5139 lr 1.30e-04
+epoch 5 step 100 loss 0.4923 lr 1.11e-04
+== epoch 5  loss 0.4970  (52s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.780 auroc=0.844 STOP-recall=0.780 false-STOP=0.220
+   saved best (val auroc 0.8437)
+epoch 6 step 0 loss 0.4648 lr 9.22e-05
+epoch 6 step 50 loss 0.4570 lr 7.47e-05
+epoch 6 step 100 loss 0.4390 lr 5.84e-05
+== epoch 6  loss 0.4703  (52s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.795 auroc=0.854 STOP-recall=0.752 false-STOP=0.167
+   saved best (val auroc 0.8536)
+epoch 7 step 0 loss 0.3430 lr 4.37e-05
+epoch 7 step 50 loss 0.5511 lr 3.08e-05
+epoch 7 step 100 loss 0.3505 lr 1.99e-05
+== epoch 7  loss 0.4378  (52s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.785 auroc=0.854 STOP-recall=0.801 false-STOP=0.230
+   saved best (val auroc 0.8540)
+epoch 8 step 0 loss 0.5785 lr 1.13e-05
+epoch 8 step 50 loss 0.4102 lr 5.01e-06
+epoch 8 step 100 loss 0.3966 lr 1.23e-06
+== epoch 8  loss 0.4240  (52s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.785 auroc=0.854 STOP-recall=0.808 false-STOP=0.236
+   saved best (val auroc 0.8544)
+
+Final (best epoch 8); threshold tuned on val for STOP recall >= 0.95
+[val/argm ] n= 600 (STOP 282) thr=+0.000 acc=0.785 auroc=0.854 STOP-recall=0.808 false-STOP=0.236
+[val/safe ] n= 600 (STOP 282) thr=-1.734 acc=0.593 auroc=0.854 STOP-recall=0.950 false-STOP=0.723
+[BDD t/argm] n= 600 (STOP 289) thr=+0.000 acc=0.778 auroc=0.857 STOP-recall=0.789 false-STOP=0.232
+[BDD t/safe] n= 600 (STOP 289) thr=-1.734 acc=0.613 auroc=0.857 STOP-recall=0.955 false-STOP=0.704
+[BITS/argm] n= 245 (STOP 4) thr=+0.000 acc=0.939 auroc=0.766 STOP-recall=0.500 false-STOP=0.054  <-- too few STOP images, numbers unreliable
+[BITS/safe] n= 245 (STOP 4) thr=-1.734 acc=0.359 auroc=0.766 STOP-recall=0.750 false-STOP=0.647  <-- too few STOP images, numbers unreliable
+
+Saved runs/D_full384/best.pt, metrics.json, log.csv

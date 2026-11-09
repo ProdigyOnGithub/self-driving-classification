@@ -1,0 +1,100 @@
+device=cuda bf16=True -> runs/B_frozen384
+BDD train 4800 | val 600 | test 600 | BITS 245
+Loading weights:   0%|          | 0/208 [00:00<?, ?it/s]Loading weights: 100%|██████████| 208/208 [00:00<00:00, 7120.65it/s]
+[transformers] [1mSiglipVisionModel LOAD REPORT[0m from: google/siglip-base-patch16-384
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+logit_bias                                                   | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+text_model.head.weight                                       | UNEXPECTED |  | 
+text_model.head.bias                                         | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  [train view 0] encoded 64/4800  [train view 0] encoded 128/4800  [train view 0] encoded 192/4800  [train view 0] encoded 256/4800  [train view 0] encoded 320/4800  [train view 0] encoded 384/4800  [train view 0] encoded 448/4800  [train view 0] encoded 512/4800  [train view 0] encoded 576/4800  [train view 0] encoded 640/4800  [train view 0] encoded 704/4800  [train view 0] encoded 768/4800  [train view 0] encoded 832/4800  [train view 0] encoded 896/4800  [train view 0] encoded 960/4800  [train view 0] encoded 1024/4800  [train view 0] encoded 1088/4800  [train view 0] encoded 1152/4800  [train view 0] encoded 1216/4800  [train view 0] encoded 1280/4800  [train view 0] encoded 1344/4800  [train view 0] encoded 1408/4800  [train view 0] encoded 1472/4800  [train view 0] encoded 1536/4800  [train view 0] encoded 1600/4800  [train view 0] encoded 1664/4800  [train view 0] encoded 1728/4800  [train view 0] encoded 1792/4800  [train view 0] encoded 1856/4800  [train view 0] encoded 1920/4800  [train view 0] encoded 1984/4800  [train view 0] encoded 2048/4800  [train view 0] encoded 2112/4800  [train view 0] encoded 2176/4800  [train view 0] encoded 2240/4800  [train view 0] encoded 2304/4800  [train view 0] encoded 2368/4800  [train view 0] encoded 2432/4800  [train view 0] encoded 2496/4800  [train view 0] encoded 2560/4800  [train view 0] encoded 2624/4800  [train view 0] encoded 2688/4800  [train view 0] encoded 2752/4800  [train view 0] encoded 2816/4800  [train view 0] encoded 2880/4800  [train view 0] encoded 2944/4800  [train view 0] encoded 3008/4800  [train view 0] encoded 3072/4800  [train view 0] encoded 3136/4800  [train view 0] encoded 3200/4800  [train view 0] encoded 3264/4800  [train view 0] encoded 3328/4800  [train view 0] encoded 3392/4800  [train view 0] encoded 3456/4800  [train view 0] encoded 3520/4800  [train view 0] encoded 3584/4800  [train view 0] encoded 3648/4800  [train view 0] encoded 3712/4800  [train view 0] encoded 3776/4800  [train view 0] encoded 3840/4800  [train view 0] encoded 3904/4800  [train view 0] encoded 3968/4800  [train view 0] encoded 4032/4800  [train view 0] encoded 4096/4800  [train view 0] encoded 4160/4800  [train view 0] encoded 4224/4800  [train view 0] encoded 4288/4800  [train view 0] encoded 4352/4800  [train view 0] encoded 4416/4800  [train view 0] encoded 4480/4800  [train view 0] encoded 4544/4800  [train view 0] encoded 4608/4800  [train view 0] encoded 4672/4800  [train view 0] encoded 4736/4800  [train view 0] encoded 4800/4800
+  [train view 1] encoded 64/4800  [train view 1] encoded 128/4800  [train view 1] encoded 192/4800  [train view 1] encoded 256/4800  [train view 1] encoded 320/4800  [train view 1] encoded 384/4800  [train view 1] encoded 448/4800  [train view 1] encoded 512/4800  [train view 1] encoded 576/4800  [train view 1] encoded 640/4800  [train view 1] encoded 704/4800  [train view 1] encoded 768/4800  [train view 1] encoded 832/4800  [train view 1] encoded 896/4800  [train view 1] encoded 960/4800  [train view 1] encoded 1024/4800  [train view 1] encoded 1088/4800  [train view 1] encoded 1152/4800  [train view 1] encoded 1216/4800  [train view 1] encoded 1280/4800  [train view 1] encoded 1344/4800  [train view 1] encoded 1408/4800  [train view 1] encoded 1472/4800  [train view 1] encoded 1536/4800  [train view 1] encoded 1600/4800  [train view 1] encoded 1664/4800  [train view 1] encoded 1728/4800  [train view 1] encoded 1792/4800  [train view 1] encoded 1856/4800  [train view 1] encoded 1920/4800  [train view 1] encoded 1984/4800  [train view 1] encoded 2048/4800  [train view 1] encoded 2112/4800  [train view 1] encoded 2176/4800  [train view 1] encoded 2240/4800  [train view 1] encoded 2304/4800  [train view 1] encoded 2368/4800  [train view 1] encoded 2432/4800  [train view 1] encoded 2496/4800  [train view 1] encoded 2560/4800  [train view 1] encoded 2624/4800  [train view 1] encoded 2688/4800  [train view 1] encoded 2752/4800  [train view 1] encoded 2816/4800  [train view 1] encoded 2880/4800  [train view 1] encoded 2944/4800  [train view 1] encoded 3008/4800  [train view 1] encoded 3072/4800  [train view 1] encoded 3136/4800  [train view 1] encoded 3200/4800  [train view 1] encoded 3264/4800  [train view 1] encoded 3328/4800  [train view 1] encoded 3392/4800  [train view 1] encoded 3456/4800  [train view 1] encoded 3520/4800  [train view 1] encoded 3584/4800  [train view 1] encoded 3648/4800  [train view 1] encoded 3712/4800  [train view 1] encoded 3776/4800  [train view 1] encoded 3840/4800  [train view 1] encoded 3904/4800  [train view 1] encoded 3968/4800  [train view 1] encoded 4032/4800  [train view 1] encoded 4096/4800  [train view 1] encoded 4160/4800  [train view 1] encoded 4224/4800  [train view 1] encoded 4288/4800  [train view 1] encoded 4352/4800  [train view 1] encoded 4416/4800  [train view 1] encoded 4480/4800  [train view 1] encoded 4544/4800  [train view 1] encoded 4608/4800  [train view 1] encoded 4672/4800  [train view 1] encoded 4736/4800  [train view 1] encoded 4800/4800
+  [train view 2] encoded 64/4800  [train view 2] encoded 128/4800  [train view 2] encoded 192/4800  [train view 2] encoded 256/4800  [train view 2] encoded 320/4800  [train view 2] encoded 384/4800  [train view 2] encoded 448/4800  [train view 2] encoded 512/4800  [train view 2] encoded 576/4800  [train view 2] encoded 640/4800  [train view 2] encoded 704/4800  [train view 2] encoded 768/4800  [train view 2] encoded 832/4800  [train view 2] encoded 896/4800  [train view 2] encoded 960/4800  [train view 2] encoded 1024/4800  [train view 2] encoded 1088/4800  [train view 2] encoded 1152/4800  [train view 2] encoded 1216/4800  [train view 2] encoded 1280/4800  [train view 2] encoded 1344/4800  [train view 2] encoded 1408/4800  [train view 2] encoded 1472/4800  [train view 2] encoded 1536/4800  [train view 2] encoded 1600/4800  [train view 2] encoded 1664/4800  [train view 2] encoded 1728/4800  [train view 2] encoded 1792/4800  [train view 2] encoded 1856/4800  [train view 2] encoded 1920/4800  [train view 2] encoded 1984/4800  [train view 2] encoded 2048/4800  [train view 2] encoded 2112/4800  [train view 2] encoded 2176/4800  [train view 2] encoded 2240/4800  [train view 2] encoded 2304/4800  [train view 2] encoded 2368/4800  [train view 2] encoded 2432/4800  [train view 2] encoded 2496/4800  [train view 2] encoded 2560/4800  [train view 2] encoded 2624/4800  [train view 2] encoded 2688/4800  [train view 2] encoded 2752/4800  [train view 2] encoded 2816/4800  [train view 2] encoded 2880/4800  [train view 2] encoded 2944/4800  [train view 2] encoded 3008/4800  [train view 2] encoded 3072/4800  [train view 2] encoded 3136/4800  [train view 2] encoded 3200/4800  [train view 2] encoded 3264/4800  [train view 2] encoded 3328/4800  [train view 2] encoded 3392/4800  [train view 2] encoded 3456/4800  [train view 2] encoded 3520/4800  [train view 2] encoded 3584/4800  [train view 2] encoded 3648/4800  [train view 2] encoded 3712/4800  [train view 2] encoded 3776/4800  [train view 2] encoded 3840/4800  [train view 2] encoded 3904/4800  [train view 2] encoded 3968/4800  [train view 2] encoded 4032/4800  [train view 2] encoded 4096/4800  [train view 2] encoded 4160/4800  [train view 2] encoded 4224/4800  [train view 2] encoded 4288/4800  [train view 2] encoded 4352/4800  [train view 2] encoded 4416/4800  [train view 2] encoded 4480/4800  [train view 2] encoded 4544/4800  [train view 2] encoded 4608/4800  [train view 2] encoded 4672/4800  [train view 2] encoded 4736/4800  [train view 2] encoded 4800/4800
+  [val view 0] encoded 64/600  [val view 0] encoded 128/600  [val view 0] encoded 192/600  [val view 0] encoded 256/600  [val view 0] encoded 320/600  [val view 0] encoded 384/600  [val view 0] encoded 448/600  [val view 0] encoded 512/600  [val view 0] encoded 576/600  [val view 0] encoded 600/600
+  [test view 0] encoded 64/600  [test view 0] encoded 128/600  [test view 0] encoded 192/600  [test view 0] encoded 256/600  [test view 0] encoded 320/600  [test view 0] encoded 384/600  [test view 0] encoded 448/600  [test view 0] encoded 512/600  [test view 0] encoded 576/600  [test view 0] encoded 600/600
+  [bits view 0] encoded 64/245  [bits view 0] encoded 128/245  [bits view 0] encoded 192/245  [bits view 0] encoded 245/245
+visual tokens per image: 144 x 768  (views per train image: 3)
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 3813.82it/s]
+mode=frozen  trainable params: 1.49M
+epoch 1 step 0 loss 0.8608 lr 1.00e-05
+epoch 1 step 50 loss 0.5720 lr 2.59e-04
+epoch 1 step 100 loss 0.5980 lr 2.95e-04
+== epoch 1  loss 0.6407  (27s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.548 auroc=0.786 STOP-recall=0.986 false-STOP=0.840
+   saved best (val auroc 0.7857)
+epoch 2 step 0 loss 0.5821 lr 2.88e-04
+epoch 2 step 50 loss 0.6994 lr 2.80e-04
+epoch 2 step 100 loss 0.8815 lr 2.69e-04
+== epoch 2  loss 0.5594  (27s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.732 auroc=0.821 STOP-recall=0.830 false-STOP=0.355
+   saved best (val auroc 0.8206)
+epoch 3 step 0 loss 0.4719 lr 2.56e-04
+epoch 3 step 50 loss 0.7488 lr 2.41e-04
+epoch 3 step 100 loss 0.5756 lr 2.25e-04
+== epoch 3  loss 0.5174  (27s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.768 auroc=0.837 STOP-recall=0.745 false-STOP=0.211
+   saved best (val auroc 0.8366)
+epoch 4 step 0 loss 0.4720 lr 2.07e-04
+epoch 4 step 50 loss 0.5521 lr 1.88e-04
+epoch 4 step 100 loss 0.5072 lr 1.69e-04
+== epoch 4  loss 0.4821  (27s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.778 auroc=0.849 STOP-recall=0.777 false-STOP=0.220
+   saved best (val auroc 0.8485)
+epoch 5 step 0 loss 0.4764 lr 1.50e-04
+epoch 5 step 50 loss 0.4564 lr 1.30e-04
+epoch 5 step 100 loss 0.4174 lr 1.11e-04
+== epoch 5  loss 0.4364  (27s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.775 auroc=0.863 STOP-recall=0.699 false-STOP=0.157
+   saved best (val auroc 0.8631)
+epoch 6 step 0 loss 0.4129 lr 9.22e-05
+epoch 6 step 50 loss 0.2659 lr 7.47e-05
+epoch 6 step 100 loss 0.3727 lr 5.84e-05
+== epoch 6  loss 0.3999  (27s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.798 auroc=0.864 STOP-recall=0.769 false-STOP=0.176
+   saved best (val auroc 0.8637)
+epoch 7 step 0 loss 0.2685 lr 4.37e-05
+epoch 7 step 50 loss 0.4334 lr 3.08e-05
+epoch 7 step 100 loss 0.3170 lr 1.99e-05
+== epoch 7  loss 0.3614  (27s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.800 auroc=0.866 STOP-recall=0.808 false-STOP=0.207
+   saved best (val auroc 0.8662)
+epoch 8 step 0 loss 0.4322 lr 1.13e-05
+epoch 8 step 50 loss 0.3404 lr 5.01e-06
+epoch 8 step 100 loss 0.3300 lr 1.23e-06
+== epoch 8  loss 0.3376  (27s)
+[val      ] n= 600 (STOP 282) thr=+0.000 acc=0.807 auroc=0.867 STOP-recall=0.816 false-STOP=0.201
+   saved best (val auroc 0.8672)
+
+Final (best epoch 8); threshold tuned on val for STOP recall >= 0.95
+[val/argm ] n= 600 (STOP 282) thr=+0.000 acc=0.807 auroc=0.867 STOP-recall=0.816 false-STOP=0.201
+[val/safe ] n= 600 (STOP 282) thr=-1.500 acc=0.657 auroc=0.867 STOP-recall=0.950 false-STOP=0.604
+[BDD t/argm] n= 600 (STOP 289) thr=+0.000 acc=0.787 auroc=0.861 STOP-recall=0.778 false-STOP=0.206
+[BDD t/safe] n= 600 (STOP 289) thr=-1.500 acc=0.670 auroc=0.861 STOP-recall=0.941 false-STOP=0.582
+[BITS/argm] n= 245 (STOP 4) thr=+0.000 acc=0.943 auroc=0.820 STOP-recall=0.250 false-STOP=0.046  <-- too few STOP images, numbers unreliable
+[BITS/safe] n= 245 (STOP 4) thr=-1.500 acc=0.584 auroc=0.820 STOP-recall=0.750 false-STOP=0.419  <-- too few STOP images, numbers unreliable
+
+Saved runs/B_frozen384/best.pt, metrics.json, log.csv

@@ -1,0 +1,71 @@
+{
+  "best_epoch": 5,
+  "target_STOP_recall": 0.95,
+  "threshold": -1.812501,
+  "val|argmax": {
+    "n": 600,
+    "n_STOP": 282,
+    "n_MOVE": 318,
+    "threshold": 0.0,
+    "acc": 0.7667,
+    "auroc": 0.8489,
+    "STOP_recall": 0.6915,
+    "false_MOVE": 0.3085,
+    "false_STOP": 0.1667
+  },
+  "val|safety": {
+    "n": 600,
+    "n_STOP": 282,
+    "n_MOVE": 318,
+    "threshold": -1.8125,
+    "acc": 0.6467,
+    "auroc": 0.8489,
+    "STOP_recall": 0.9504,
+    "false_MOVE": 0.0496,
+    "false_STOP": 0.6226
+  },
+  "BDD test|argmax": {
+    "n": 600,
+    "n_STOP": 289,
+    "n_MOVE": 311,
+    "threshold": 0.0,
+    "acc": 0.7817,
+    "auroc": 0.8568,
+    "STOP_recall": 0.7128,
+    "false_MOVE": 0.2872,
+    "false_STOP": 0.1543
+  },
+  "BDD test|safety": {
+    "n": 600,
+    "n_STOP": 289,
+    "n_MOVE": 311,
+    "threshold": -1.8125,
+    "acc": 0.675,
+    "auroc": 0.8568,
+    "STOP_recall": 0.9308,
+    "false_MOVE": 0.0692,
+    "false_STOP": 0.5627
+  },
+  "BITS|argmax": {
+    "n": 245,
+    "n_STOP": 4,
+    "n_MOVE": 241,
+    "threshold": 0.0,
+    "acc": 0.951,
+    "auroc": 0.8449,
+    "STOP_recall": 0.0,
+    "false_MOVE": 1.0,
+    "false_STOP": 0.0332
+  },
+  "BITS|safety": {
+    "n": 245,
+    "n_STOP": 4,
+    "n_MOVE": 241,
+    "threshold": -1.8125,
+    "acc": 0.249,
+    "auroc": 0.8449,
+    "STOP_recall": 1.0,
+    "false_MOVE": 0.0,
+    "false_STOP": 0.7635
+  }
+}
